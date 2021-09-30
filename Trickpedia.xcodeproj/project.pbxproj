@@ -9,21 +9,31 @@
 /* Begin PBXBuildFile section */
 		5B9F13792705141800A544F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F13782705141800A544F9 /* AppDelegate.swift */; };
 		5B9F137B2705141800A544F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F137A2705141800A544F9 /* SceneDelegate.swift */; };
-		5B9F137D2705141800A544F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F137C2705141800A544F9 /* ViewController.swift */; };
+		5B9F137D2705141800A544F9 /* TrickListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F137C2705141800A544F9 /* TrickListViewController.swift */; };
 		5B9F13802705141800A544F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F137E2705141800A544F9 /* Main.storyboard */; };
 		5B9F13822705141D00A544F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F13812705141D00A544F9 /* Assets.xcassets */; };
 		5B9F13852705141D00A544F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B9F13832705141D00A544F9 /* LaunchScreen.storyboard */; };
+		5B9F13902705177700A544F9 /* Trick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F138F2705177700A544F9 /* Trick.swift */; };
+		5B9F1392270517D900A544F9 /* TrickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F1391270517D900A544F9 /* TrickTableViewCell.swift */; };
+		5B9F139427053E1000A544F9 /* TrickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F139327053E1000A544F9 /* TrickViewController.swift */; };
+		5B9F1396270576E400A544F9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F1395270576E400A544F9 /* CategoryCollectionViewCell.swift */; };
+		5B9F1398270586D400A544F9 /* NewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F1397270586D400A544F9 /* NewVideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B9F13752705141800A544F9 /* Trickpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trickpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9F13782705141800A544F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9F137A2705141800A544F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B9F137C2705141800A544F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B9F137C2705141800A544F9 /* TrickListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickListViewController.swift; sourceTree = "<group>"; };
 		5B9F137F2705141800A544F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B9F13812705141D00A544F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B9F13842705141D00A544F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B9F13862705141D00A544F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B9F138F2705177700A544F9 /* Trick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trick.swift; sourceTree = "<group>"; };
+		5B9F1391270517D900A544F9 /* TrickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickTableViewCell.swift; sourceTree = "<group>"; };
+		5B9F139327053E1000A544F9 /* TrickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickViewController.swift; sourceTree = "<group>"; };
+		5B9F1395270576E400A544F9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B9F1397270586D400A544F9 /* NewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,44 @@
 		5B9F13772705141800A544F9 /* Trickpedia */ = {
 			isa = PBXGroup;
 			children = (
+				5B9F138D2705175700A544F9 /* models */,
+				5B9F138E2705176100A544F9 /* views */,
+				5B9F138C2705174E00A544F9 /* controllers */,
 				5B9F13782705141800A544F9 /* AppDelegate.swift */,
 				5B9F137A2705141800A544F9 /* SceneDelegate.swift */,
-				5B9F137C2705141800A544F9 /* ViewController.swift */,
 				5B9F137E2705141800A544F9 /* Main.storyboard */,
 				5B9F13812705141D00A544F9 /* Assets.xcassets */,
 				5B9F13832705141D00A544F9 /* LaunchScreen.storyboard */,
 				5B9F13862705141D00A544F9 /* Info.plist */,
 			);
 			path = Trickpedia;
+			sourceTree = "<group>";
+		};
+		5B9F138C2705174E00A544F9 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F137C2705141800A544F9 /* TrickListViewController.swift */,
+				5B9F139327053E1000A544F9 /* TrickViewController.swift */,
+				5B9F1397270586D400A544F9 /* NewVideoViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		5B9F138D2705175700A544F9 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F138F2705177700A544F9 /* Trick.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		5B9F138E2705176100A544F9 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F1391270517D900A544F9 /* TrickTableViewCell.swift */,
+				5B9F1395270576E400A544F9 /* CategoryCollectionViewCell.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B9F137D2705141800A544F9 /* ViewController.swift in Sources */,
+				5B9F1392270517D900A544F9 /* TrickTableViewCell.swift in Sources */,
+				5B9F137D2705141800A544F9 /* TrickListViewController.swift in Sources */,
+				5B9F139427053E1000A544F9 /* TrickViewController.swift in Sources */,
 				5B9F13792705141800A544F9 /* AppDelegate.swift in Sources */,
 				5B9F137B2705141800A544F9 /* SceneDelegate.swift in Sources */,
+				5B9F1396270576E400A544F9 /* CategoryCollectionViewCell.swift in Sources */,
+				5B9F13902705177700A544F9 /* Trick.swift in Sources */,
+				5B9F1398270586D400A544F9 /* NewVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

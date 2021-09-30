@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZeN-UN-wnE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -195,18 +196,6 @@
                                     <constraint firstAttribute="width" secondItem="TMa-Pq-LgJ" secondAttribute="height" multiplier="428:285" id="pce-95-dzC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phl-dM-jbJ">
-                                <rect key="frame" x="20" y="44" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="Gw1-0j-7Kj"/>
-                                    <constraint firstAttribute="height" constant="30" id="sVF-eP-NnP"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Group 22"/>
-                                <connections>
-                                    <action selector="goBack:" destination="8gR-9w-xS4" eventType="touchUpInside" id="Piy-oP-foa"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da trick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nCS-Ix-mLb">
                                 <rect key="frame" x="20" y="295" width="155" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
@@ -241,12 +230,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9BR-Wl-e9G"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="   Adicionar vídeo">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="   Adicionar vídeo">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="semibold"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                </state>
                                 <connections>
                                     <action selector="addVideo:" destination="8gR-9w-xS4" eventType="touchUpInside" id="wqY-cz-kBs"/>
                                 </connections>
@@ -256,9 +247,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SNl-oX-gIh" firstAttribute="centerY" secondItem="nCS-Ix-mLb" secondAttribute="centerY" id="2da-fz-tr6"/>
-                            <constraint firstItem="Phl-dM-jbJ" firstAttribute="leading" secondItem="wwc-n3-Zce" secondAttribute="leading" constant="20" id="4qO-vb-gUb"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="top" secondItem="TMa-Pq-LgJ" secondAttribute="top" constant="50" id="8uH-gC-dVa"/>
-                            <constraint firstItem="wwc-n3-Zce" firstAttribute="top" secondItem="Phl-dM-jbJ" secondAttribute="top" id="9je-qO-cy2"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" secondItem="dcD-h2-dpf" secondAttribute="trailing" constant="20" id="Au7-kS-PoK"/>
                             <constraint firstItem="nCS-Ix-mLb" firstAttribute="top" secondItem="TMa-Pq-LgJ" secondAttribute="bottom" constant="25.5" id="Ddi-ai-oLc"/>
                             <constraint firstItem="bNd-wX-KvT" firstAttribute="top" secondItem="aXs-gO-Xl8" secondAttribute="bottom" constant="20" id="Dtw-R1-1r6"/>
@@ -268,7 +257,6 @@
                             <constraint firstItem="dcD-h2-dpf" firstAttribute="centerY" secondItem="SNl-oX-gIh" secondAttribute="centerY" id="LUf-Sd-gkM"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TMa-Pq-LgJ" secondAttribute="bottom" constant="300" id="Nhb-h4-36O"/>
                             <constraint firstItem="aXs-gO-Xl8" firstAttribute="top" secondItem="nCS-Ix-mLb" secondAttribute="bottom" constant="20" id="TW7-D4-3RY"/>
-                            <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Phl-dM-jbJ" secondAttribute="trailing" constant="30" id="em3-r4-Q3J"/>
                             <constraint firstItem="aXs-gO-Xl8" firstAttribute="leading" secondItem="wwc-n3-Zce" secondAttribute="leading" constant="20" id="gaa-lt-tKH"/>
                             <constraint firstItem="TMa-Pq-LgJ" firstAttribute="trailing" secondItem="wwc-n3-Zce" secondAttribute="trailing" id="ogs-f8-RZ9"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" secondItem="aXs-gO-Xl8" secondAttribute="trailing" constant="20" id="sfg-r7-FgZ"/>
@@ -280,6 +268,7 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="addVideoButton" destination="bNd-wX-KvT" id="enw-MJ-abp"/>
                         <outlet property="descriptionLabel" destination="aXs-gO-Xl8" id="oZb-8k-N0Q"/>
                         <outlet property="levelImageView" destination="SNl-oX-gIh" id="Rp9-k9-BUA"/>
                         <outlet property="levelLabel" destination="dcD-h2-dpf" id="Gne-4p-ZX1"/>
@@ -290,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="1869.5652173913045" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--New Video View Controller-->
         <scene sceneID="X3q-bX-Pfb">
             <objects>
-                <viewController storyboardIdentifier="NewVideo" id="wQi-9x-3M5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewVideo" id="wQi-9x-3M5" customClass="NewVideoViewController" customModule="Trickpedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7J0-Vj-pbH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,10 +312,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="a1I-1v-tbz"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Salvar">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveVideo:" destination="wQi-9x-3M5" eventType="touchUpInside" id="L8T-5x-RQh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9hC-nE-blV"/>
@@ -343,6 +336,10 @@
                             <constraint firstItem="Byb-zg-IxV" firstAttribute="top" secondItem="9hC-nE-blV" secondAttribute="top" constant="40" id="qPT-gv-bvV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addVideoButton" destination="0bA-uB-XWn" id="Snl-Ox-rCr"/>
+                        <outlet property="saveButton" destination="taB-hT-XDB" id="lL8-Ob-94r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MG-89-cZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -377,7 +374,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Group 22" width="38" height="38"/>
         <image name="easy" width="17" height="14"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trickImageTest" width="1280" height="855"/>

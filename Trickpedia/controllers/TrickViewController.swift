@@ -8,12 +8,14 @@ class TrickViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var levelImageView: UIImageView!
     @IBOutlet var levelLabel: UILabel!
+    @IBOutlet var addVideoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         levelLabel.text = trick.level.rawValue
         nameLabel.text = trick.name
         descriptionLabel.text = trick.description
+        addVideoButton.layer.cornerRadius = 25
         
         switch trick.level {
         case .easy:
@@ -27,10 +29,6 @@ class TrickViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
-    }
-    
-    @IBAction func goBack(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func addVideo(_ sender: Any) {

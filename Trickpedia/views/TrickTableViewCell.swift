@@ -8,6 +8,8 @@ class TrickTableViewCell: UITableViewCell {
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var levelImageView: UIImageView!
     @IBOutlet var levelLabel: UILabel!
+    @IBOutlet var statusImageView: UIImageView!
+    @IBOutlet var lockedBackgroundView: UIView!
     
     var trick: Trick!
     
@@ -29,6 +31,18 @@ class TrickTableViewCell: UITableViewCell {
             levelImageView.image = UIImage(named: "medium")
         case .hard:
             levelImageView.image = UIImage(named: "hard")
+        }
+        
+        switch trick.currentState {
+        case .todo:
+            statusImageView.image = UIImage(named: "todo")
+            lockedBackgroundView.alpha = 0
+        case .locked:
+            statusImageView.image = UIImage(named: "locked")
+            lockedBackgroundView.alpha = 1
+        case .done:
+            statusImageView.image = UIImage(named: "done")
+            lockedBackgroundView.alpha = 0
         }
     }
 }

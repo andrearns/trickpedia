@@ -122,17 +122,34 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="done" translatesAutoresizingMaskIntoConstraints="NO" id="EGI-nF-n6a">
+                                                            <rect key="frame" x="321" y="19" width="42" height="42"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="42" id="MqZ-yc-u5X"/>
+                                                                <constraint firstAttribute="width" secondItem="EGI-nF-n6a" secondAttribute="height" multiplier="1:1" id="WGt-NR-Dpa"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUx-oB-Vpy">
+                                                            <rect key="frame" x="302" y="0.0" width="80" height="80"/>
+                                                            <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="CUx-oB-Vpy" secondAttribute="trailing" id="2o6-8Q-1d7"/>
                                                         <constraint firstAttribute="trailing" secondItem="ovY-6H-Ogr" secondAttribute="trailing" constant="20" id="Csh-a3-m6y"/>
+                                                        <constraint firstItem="CUx-oB-Vpy" firstAttribute="height" secondItem="qTM-uM-imi" secondAttribute="height" id="HQB-xa-mO0"/>
                                                         <constraint firstItem="JF3-C4-Dpy" firstAttribute="leading" secondItem="PUU-cZ-AHj" secondAttribute="trailing" constant="20" id="N2T-G1-3iW"/>
+                                                        <constraint firstItem="EGI-nF-n6a" firstAttribute="centerY" secondItem="CUx-oB-Vpy" secondAttribute="centerY" id="PMv-Bn-M3c"/>
+                                                        <constraint firstItem="CUx-oB-Vpy" firstAttribute="width" secondItem="qTM-uM-imi" secondAttribute="height" multiplier="1:1" id="Q4n-9Z-Z21"/>
                                                         <constraint firstItem="XYJ-QD-vGu" firstAttribute="centerY" secondItem="JF3-C4-Dpy" secondAttribute="centerY" id="Uq8-dH-2kv"/>
                                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XYJ-QD-vGu" secondAttribute="trailing" constant="20" id="WXh-n2-ade"/>
                                                         <constraint firstItem="PUU-cZ-AHj" firstAttribute="top" secondItem="ovY-6H-Ogr" secondAttribute="bottom" constant="10" id="aTX-Sz-vDC"/>
+                                                        <constraint firstItem="CUx-oB-Vpy" firstAttribute="centerY" secondItem="qTM-uM-imi" secondAttribute="centerY" id="cmU-Bk-SoS"/>
                                                         <constraint firstItem="ovY-6H-Ogr" firstAttribute="leading" secondItem="qTM-uM-imi" secondAttribute="leading" constant="20" id="dSo-wQ-Jsk"/>
                                                         <constraint firstAttribute="bottom" secondItem="PUU-cZ-AHj" secondAttribute="bottom" constant="15" id="jOd-nL-7hZ"/>
                                                         <constraint firstItem="JF3-C4-Dpy" firstAttribute="centerY" secondItem="PUU-cZ-AHj" secondAttribute="centerY" id="kah-t8-W3a"/>
+                                                        <constraint firstItem="EGI-nF-n6a" firstAttribute="centerX" secondItem="CUx-oB-Vpy" secondAttribute="centerX" id="qWg-KZ-PLZ"/>
                                                         <constraint firstItem="XYJ-QD-vGu" firstAttribute="leading" secondItem="JF3-C4-Dpy" secondAttribute="trailing" constant="10" id="qfW-Ax-YtO"/>
                                                         <constraint firstItem="PUU-cZ-AHj" firstAttribute="leading" secondItem="qTM-uM-imi" secondAttribute="leading" constant="20" id="tHh-aH-4O2"/>
                                                         <constraint firstItem="ovY-6H-Ogr" firstAttribute="top" secondItem="qTM-uM-imi" secondAttribute="top" constant="15" id="yXP-5F-zp1"/>
@@ -154,6 +171,8 @@
                                             <outlet property="cellBackgroundView" destination="qTM-uM-imi" id="dBa-Ry-eT9"/>
                                             <outlet property="levelImageView" destination="JF3-C4-Dpy" id="iw4-4w-c8n"/>
                                             <outlet property="levelLabel" destination="XYJ-QD-vGu" id="9EG-c3-C4l"/>
+                                            <outlet property="lockedBackgroundView" destination="CUx-oB-Vpy" id="SnS-4C-evg"/>
+                                            <outlet property="statusImageView" destination="EGI-nF-n6a" id="NQf-xT-icz"/>
                                             <outlet property="trickLabel" destination="ovY-6H-Ogr" id="FOn-cR-B6K"/>
                                         </connections>
                                     </tableViewCell>
@@ -449,6 +468,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="done" width="42" height="42"/>
         <image name="easy" width="17" height="14"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trickImageTest" width="1280" height="855"/>

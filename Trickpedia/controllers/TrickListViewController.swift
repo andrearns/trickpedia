@@ -29,6 +29,7 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
         searchController.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         searchController.searchBar.barTintColor = UIColor(named: "Green")
         
+        TricksManager.shared.checkIfTricksAreLocked()
         filteredTrickList = TricksBank.shared.trickList
         
         title = "Trickpedia"

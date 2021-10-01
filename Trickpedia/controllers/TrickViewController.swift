@@ -14,6 +14,9 @@ class TrickViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print(trick)
+        
         requiredTricksTableView.delegate = self
         requiredTricksTableView.dataSource = self
         
@@ -31,6 +34,26 @@ class TrickViewController: UIViewController, UITableViewDelegate, UITableViewDat
             levelImageView.image = UIImage(named: "hard")
         }
         
+        switch trick.currentState {
+        case .locked:
+            addVideoButton.setImage(UIImage(systemName: "lock.fill"), for: .normal)
+            addVideoButton.setTitle("   Trick bloqueada", for: .normal)
+            addVideoButton.tintColor = .white
+            addVideoButton.layer.backgroundColor = UIColor.gray.cgColor
+            addVideoButton.tag = 0
+        default:
+            print("")
+            addVideoButton.tag = 1
+        }
+        
+        requirementsLabel.text = "Requisitos: \(calculateRequiredTricksDone())/\(trick.requiredTricksIDs.count)"
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    func calculateRequiredTricksDone() -> Int {
         var requiredTricksDone = 0
         
         for i in 0..<trick.requiredTricksIDs.count {
@@ -38,12 +61,7 @@ class TrickViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 requiredTricksDone += 1
             }
         }
-        
-        requirementsLabel.text = "Requisitos: \(requiredTricksDone)/\(trick.requiredTricksIDs.count)"
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
+        return requiredTricksDone
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,10 +76,14 @@ class TrickViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     
-    @IBAction func addVideo(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "NewVideo")
-        navigationController?.present(vc, animated: true, completion: nil)
+    @IBAction func addVideo(_ sender: UIButton) {
+        if sender.tag == 1 {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "NewVideo")
+            navigationController?.present(vc, animated: true, completion: nil)
+        } else {
+            
+        }
     }
     
 }

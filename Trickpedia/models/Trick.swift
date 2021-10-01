@@ -1,9 +1,11 @@
 struct Trick {
+    var id: Int
     var name: String
     var description: String
     var category: TrickCategory
     var level: TrickLevel
-    var currentState: TrickState = .todo
+    var currentState: TrickState
+    var requiredTricksIDs: [Int] = []
  }
 
 enum TrickCategory: String {

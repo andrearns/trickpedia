@@ -1,16 +1,5 @@
 import UIKit
 
-var trickList: [Trick] = [
-    Trick(name: "Ollie", description: "O Ollie é a manobra fundamental do skate.", category: .flatground, level: .easy),
-    Trick(name: "Flip", description: "O Flip é uma das manobras mais legais de mandar. O skate gira uma vez em baixo dos seus pés.", category: .flatground, level: .medium),
-    Trick(name: "Varial", description: "O Varial é uma manobra bem simples: é basicamente um giro de 180 graus para sua frente", category: .flatground, level: .hard),
-    Trick(name: "Nollie", description: "O Nollie é a manobra é um pulo usando a base do Nollie. O nollie é uma junção do fakie com o switch.", category: .flatground, level: .easy),
-    Trick(name: "50-50", description: "O Ollie é a manobra fundamental do skate.", category: .rail, level: .medium),
-    Trick(name: "F/S Smith Grind", description: "O Flip é uma das manobras mais legais de mandar. O skate gira uma vez em baixo dos seus pés.", category: .rail, level: .hard),
-    Trick(name: "B/S Smith Grind", description: "O Varial é uma manobra bem simples: é basicamente um giro de 180 graus para sua frente", category: .rail, level: .medium),
-    Trick(name: "F/S Noseblunt", description: "O Nollie é a manobra é um pulo usando a base do Nollie. O nollie é uma junção do fakie com o switch.", category: .rail, level: .hard)
-]
-
 var categoriesList: [TrickCategory] = [
     .all,
     .flatground,
@@ -40,7 +29,7 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
         searchController.searchBar.setValue("Cancelar", forKey: "cancelButtonText")
         searchController.searchBar.barTintColor = UIColor(named: "Green")
         
-        filteredTrickList = trickList
+        filteredTrickList = TricksBank.shared.trickList
         
         title = "Trickpedia"
         navigationItem.searchController = searchController
@@ -70,11 +59,11 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let category = categoriesList[indexPath.row]
         if category != .all {
-            filteredTrickList = trickList.filter({ trick in
+            filteredTrickList = TricksBank.shared.trickList.filter({ trick in
                 trick.category == category
             })
         } else {
-            filteredTrickList = trickList
+            filteredTrickList = TricksBank.shared.trickList
         }
         tricksTableView.reloadData()
     }
@@ -86,7 +75,7 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.categoryLabel.font = UIFont.systemFont(ofSize: 14.0, weight: .medium)
             
         }
-        filteredTrickList = trickList
+        filteredTrickList = TricksBank.shared.trickList
         tricksTableView.reloadData()
     }
     
@@ -116,7 +105,7 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
             return
         }
         if text == "" {
-            filteredTrickList = trickList
+            filteredTrickList = TricksBank.shared.trickList
         } else {
             filteredTrickList = filteredTrickList.filter({ trick in
                 return trick.name.starts(with: text) || trick.name.contains(text) || trick.category.rawValue.starts(with: text) || trick.level.rawValue.starts(with: text)

@@ -187,7 +187,7 @@
             <objects>
                 <viewController storyboardIdentifier="Trick" id="8gR-9w-xS4" customClass="TrickViewController" customModule="Trickpedia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bee-ZG-FzY">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trickImageTest" translatesAutoresizingMaskIntoConstraints="NO" id="TMa-Pq-LgJ">
@@ -225,7 +225,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-wX-KvT">
-                                <rect key="frame" x="20" y="383.5" width="374" height="50"/>
+                                <rect key="frame" x="20" y="896" width="374" height="50"/>
                                 <color key="backgroundColor" red="0.53029700969827587" green="0.94901960780000005" blue="0.43395062613125002" alpha="0.80137250212585032" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9BR-Wl-e9G"/>
@@ -242,22 +242,81 @@
                                     <action selector="addVideo:" destination="8gR-9w-xS4" eventType="touchUpInside" id="wqY-cz-kBs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requisitos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVh-Yb-pm1">
+                                <rect key="frame" x="20" y="389" width="374" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PGR-dj-dP2">
+                                <rect key="frame" x="20" y="419" width="374" height="447"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="requiredTrickCell" rowHeight="25" id="Luo-05-0EM" customClass="RequiredTrickTableViewCell" customModule="Trickpedia" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="25"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Luo-05-0EM" id="Q6S-uW-ZtP">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da trick" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxe-2R-J1E">
+                                                    <rect key="frame" x="18" y="2.5" width="101.5" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="ZEh-d9-GYh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XNJ-0f-juG">
+                                                    <rect key="frame" x="0.0" y="8.5" width="8" height="8"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="8" id="Sx5-EG-7Kh"/>
+                                                        <constraint firstAttribute="width" secondItem="XNJ-0f-juG" secondAttribute="height" multiplier="1:1" id="ZDO-O3-Ihc"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="wxe-2R-J1E" firstAttribute="centerY" secondItem="Q6S-uW-ZtP" secondAttribute="centerY" id="MIw-Ck-jF7"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wxe-2R-J1E" secondAttribute="trailing" id="TAV-2L-tvL"/>
+                                                <constraint firstItem="XNJ-0f-juG" firstAttribute="leading" secondItem="Q6S-uW-ZtP" secondAttribute="leading" id="Vwv-UK-AM8"/>
+                                                <constraint firstItem="wxe-2R-J1E" firstAttribute="leading" secondItem="XNJ-0f-juG" secondAttribute="trailing" constant="10" id="gXU-Yk-8qc"/>
+                                                <constraint firstItem="XNJ-0f-juG" firstAttribute="centerY" secondItem="Q6S-uW-ZtP" secondAttribute="centerY" id="pc3-Tu-tGQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="bulletView" destination="XNJ-0f-juG" id="LFk-yM-bDH"/>
+                                            <outlet property="trickLabel" destination="wxe-2R-J1E" id="IMa-xT-VNh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wwc-n3-Zce"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="SNl-oX-gIh" firstAttribute="centerY" secondItem="nCS-Ix-mLb" secondAttribute="centerY" id="2da-fz-tr6"/>
+                            <constraint firstItem="wwc-n3-Zce" firstAttribute="bottom" secondItem="PGR-dj-dP2" secondAttribute="bottom" constant="100" id="6Cf-dI-d25"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="top" secondItem="TMa-Pq-LgJ" secondAttribute="top" constant="50" id="8uH-gC-dVa"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" secondItem="dcD-h2-dpf" secondAttribute="trailing" constant="20" id="Au7-kS-PoK"/>
                             <constraint firstItem="nCS-Ix-mLb" firstAttribute="top" secondItem="TMa-Pq-LgJ" secondAttribute="bottom" constant="25.5" id="Ddi-ai-oLc"/>
-                            <constraint firstItem="bNd-wX-KvT" firstAttribute="top" secondItem="aXs-gO-Xl8" secondAttribute="bottom" constant="20" id="Dtw-R1-1r6"/>
                             <constraint firstItem="nCS-Ix-mLb" firstAttribute="leading" secondItem="wwc-n3-Zce" secondAttribute="leading" constant="20" id="GsF-hR-LyT"/>
                             <constraint firstItem="TMa-Pq-LgJ" firstAttribute="centerX" secondItem="wwc-n3-Zce" secondAttribute="centerX" id="I8t-Ut-RCw"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="leading" secondItem="TMa-Pq-LgJ" secondAttribute="leading" id="KZQ-Nf-N2U"/>
                             <constraint firstItem="dcD-h2-dpf" firstAttribute="centerY" secondItem="SNl-oX-gIh" secondAttribute="centerY" id="LUf-Sd-gkM"/>
+                            <constraint firstItem="PGR-dj-dP2" firstAttribute="top" secondItem="VVh-Yb-pm1" secondAttribute="bottom" constant="8" symbolic="YES" id="LUp-sc-oDq"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TMa-Pq-LgJ" secondAttribute="bottom" constant="300" id="Nhb-h4-36O"/>
                             <constraint firstItem="aXs-gO-Xl8" firstAttribute="top" secondItem="nCS-Ix-mLb" secondAttribute="bottom" constant="20" id="TW7-D4-3RY"/>
+                            <constraint firstItem="wwc-n3-Zce" firstAttribute="bottom" secondItem="bNd-wX-KvT" secondAttribute="bottom" constant="20" id="acL-V8-PdK"/>
+                            <constraint firstItem="PGR-dj-dP2" firstAttribute="leading" secondItem="wwc-n3-Zce" secondAttribute="leading" constant="20" id="ePh-Al-gjf"/>
                             <constraint firstItem="aXs-gO-Xl8" firstAttribute="leading" secondItem="wwc-n3-Zce" secondAttribute="leading" constant="20" id="gaa-lt-tKH"/>
+                            <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" secondItem="PGR-dj-dP2" secondAttribute="trailing" constant="20" id="hAB-pQ-cAL"/>
+                            <constraint firstItem="VVh-Yb-pm1" firstAttribute="top" secondItem="aXs-gO-Xl8" secondAttribute="bottom" constant="25.5" id="hg8-yA-Yt9"/>
+                            <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" secondItem="VVh-Yb-pm1" secondAttribute="trailing" constant="20" id="kgP-5D-hEU"/>
+                            <constraint firstItem="VVh-Yb-pm1" firstAttribute="leading" secondItem="wwc-n3-Zce" secondAttribute="leading" constant="20" id="nTG-64-Jom"/>
                             <constraint firstItem="TMa-Pq-LgJ" firstAttribute="trailing" secondItem="wwc-n3-Zce" secondAttribute="trailing" id="ogs-f8-RZ9"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" secondItem="aXs-gO-Xl8" secondAttribute="trailing" constant="20" id="sfg-r7-FgZ"/>
                             <constraint firstItem="wwc-n3-Zce" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nCS-Ix-mLb" secondAttribute="trailing" constant="20" id="t7S-n5-L76"/>
@@ -267,12 +326,15 @@
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
+                    <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="addVideoButton" destination="bNd-wX-KvT" id="enw-MJ-abp"/>
                         <outlet property="descriptionLabel" destination="aXs-gO-Xl8" id="oZb-8k-N0Q"/>
                         <outlet property="levelImageView" destination="SNl-oX-gIh" id="Rp9-k9-BUA"/>
                         <outlet property="levelLabel" destination="dcD-h2-dpf" id="Gne-4p-ZX1"/>
                         <outlet property="nameLabel" destination="nCS-Ix-mLb" id="gDt-Mg-lF0"/>
+                        <outlet property="requiredTricksTableView" destination="PGR-dj-dP2" id="9ng-dR-RiA"/>
+                        <outlet property="requirementsLabel" destination="VVh-Yb-pm1" id="UyT-6S-Qme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9c-09-GK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -378,6 +440,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trickImageTest" width="1280" height="855"/>
         <image name="video.fill.badge.plus" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

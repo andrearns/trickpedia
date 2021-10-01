@@ -18,6 +18,9 @@
 		5B9F139427053E1000A544F9 /* TrickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F139327053E1000A544F9 /* TrickViewController.swift */; };
 		5B9F1396270576E400A544F9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F1395270576E400A544F9 /* CategoryCollectionViewCell.swift */; };
 		5B9F1398270586D400A544F9 /* NewVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F1397270586D400A544F9 /* NewVideoViewController.swift */; };
+		5B9F139D2706AFF700A544F9 /* TricksBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F139C2706AFF700A544F9 /* TricksBank.swift */; };
+		5B9F139F2706B08E00A544F9 /* TricksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F139E2706B08E00A544F9 /* TricksManager.swift */; };
+		5B9F13A12706B30A00A544F9 /* RequiredTrickTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9F13A02706B30A00A544F9 /* RequiredTrickTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		5B9F139327053E1000A544F9 /* TrickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrickViewController.swift; sourceTree = "<group>"; };
 		5B9F1395270576E400A544F9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		5B9F1397270586D400A544F9 /* NewVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVideoViewController.swift; sourceTree = "<group>"; };
+		5B9F139C2706AFF700A544F9 /* TricksBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricksBank.swift; sourceTree = "<group>"; };
+		5B9F139E2706B08E00A544F9 /* TricksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TricksManager.swift; sourceTree = "<group>"; };
+		5B9F13A02706B30A00A544F9 /* RequiredTrickTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredTrickTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		5B9F13772705141800A544F9 /* Trickpedia */ = {
 			isa = PBXGroup;
 			children = (
+				5B9F139B2706AFE100A544F9 /* service */,
 				5B9F138D2705175700A544F9 /* models */,
 				5B9F138E2705176100A544F9 /* views */,
 				5B9F138C2705174E00A544F9 /* controllers */,
@@ -102,8 +109,18 @@
 			children = (
 				5B9F1391270517D900A544F9 /* TrickTableViewCell.swift */,
 				5B9F1395270576E400A544F9 /* CategoryCollectionViewCell.swift */,
+				5B9F13A02706B30A00A544F9 /* RequiredTrickTableViewCell.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		5B9F139B2706AFE100A544F9 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F139C2706AFF700A544F9 /* TricksBank.swift */,
+				5B9F139E2706B08E00A544F9 /* TricksManager.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,12 +195,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B9F1392270517D900A544F9 /* TrickTableViewCell.swift in Sources */,
+				5B9F139F2706B08E00A544F9 /* TricksManager.swift in Sources */,
 				5B9F137D2705141800A544F9 /* TrickListViewController.swift in Sources */,
 				5B9F139427053E1000A544F9 /* TrickViewController.swift in Sources */,
 				5B9F13792705141800A544F9 /* AppDelegate.swift in Sources */,
 				5B9F137B2705141800A544F9 /* SceneDelegate.swift in Sources */,
 				5B9F1396270576E400A544F9 /* CategoryCollectionViewCell.swift in Sources */,
+				5B9F13A12706B30A00A544F9 /* RequiredTrickTableViewCell.swift in Sources */,
 				5B9F13902705177700A544F9 /* Trick.swift in Sources */,
+				5B9F139D2706AFF700A544F9 /* TricksBank.swift in Sources */,
 				5B9F1398270586D400A544F9 /* NewVideoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

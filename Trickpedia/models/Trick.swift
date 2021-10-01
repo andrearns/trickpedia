@@ -15,6 +15,7 @@ enum TrickCategory: String {
     case vertical = "Vertical"
     case freestyle = "Freestyle"
     case all = "Todas"
+    case done = "Feitas"
 }
 
 enum TrickState {

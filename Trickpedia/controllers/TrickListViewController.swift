@@ -2,10 +2,12 @@ import UIKit
 
 var categoriesList: [TrickCategory] = [
     .all,
+    .done,
     .flatground,
     .rail,
     .vertical,
-    .grab
+    .grab,
+    .freestyle
 ]
 
 class TrickListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource, UISearchResultsUpdating {
@@ -36,6 +38,12 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
         navigationItem.searchController = searchController
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
@@ -47,7 +55,7 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoriesCollectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as? CategoryCollectionViewCell
         let category = categoriesList[indexPath.row]
-        cell?.category = category
+        cell?.setup(category: category)
         return cell!
     }
     
@@ -59,11 +67,16 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
         let category = categoriesList[indexPath.row]
-        if category != .all {
+        if category != .all && category != .done {
             filteredTrickList = TricksBank.shared.trickList.filter({ trick in
                 trick.category == category
             })
-        } else {
+        } else if category == .done {
+            filteredTrickList = TricksBank.shared.trickList.filter({ trick in
+                trick.currentState == .done
+            })
+        }
+        else {
             filteredTrickList = TricksBank.shared.trickList
         }
         tricksTableView.reloadData()
@@ -98,6 +111,7 @@ class TrickListViewController: UIViewController, UITableViewDelegate, UITableVie
         let vc = storyboard.instantiateViewController(withIdentifier: "Trick") as? TrickViewController
         let trick = filteredTrickList[indexPath.row]
         vc?.trick = trick
+//        navigationController?.present(vc!, animated: true, completion: nil)
         navigationController?.pushViewController(vc!, animated: true)
     }
     

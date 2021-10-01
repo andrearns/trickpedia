@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZeN-UN-wnE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -113,6 +112,10 @@
                                                                 <constraint firstAttribute="height" constant="20" id="drZ-GQ-804"/>
                                                             </constraints>
                                                         </imageView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUx-oB-Vpy">
+                                                            <rect key="frame" x="302" y="0.0" width="80" height="80"/>
+                                                            <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dificuldade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYJ-QD-vGu">
                                                             <rect key="frame" x="160" y="45" width="64" height="20"/>
                                                             <constraints>
@@ -129,10 +132,6 @@
                                                                 <constraint firstAttribute="width" secondItem="EGI-nF-n6a" secondAttribute="height" multiplier="1:1" id="WGt-NR-Dpa"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUx-oB-Vpy">
-                                                            <rect key="frame" x="302" y="0.0" width="80" height="80"/>
-                                                            <color key="backgroundColor" red="0.38039215686274508" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
@@ -371,7 +370,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9c-09-GK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5652173913045" y="97.767857142857139"/>
+            <point key="canvasLocation" x="1855" y="133"/>
         </scene>
         <!--New Video View Controller-->
         <scene sceneID="X3q-bX-Pfb">
@@ -437,7 +436,104 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3MG-89-cZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711.594202898551" y="97.767857142857139"/>
+            <point key="canvasLocation" x="2652" y="98"/>
+        </scene>
+        <!--Locked Trick Pop Up View Controller-->
+        <scene sceneID="hr9-gd-TEQ">
+            <objects>
+                <viewController storyboardIdentifier="LockedTrickPopUp" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="ouK-hQ-1B0" customClass="LockedTrickPopUpViewController" customModule="Trickpedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCJ-vf-Q3o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnP-BN-s14">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="closePopUp:" destination="ouK-hQ-1B0" eventType="touchUpInside" id="g5z-SI-fqt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlq-ck-C5i">
+                                <rect key="frame" x="32" y="244" width="350" height="332.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="locked" translatesAutoresizingMaskIntoConstraints="NO" id="9dx-MF-8Q5">
+                                        <rect key="frame" x="135" y="32" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9dx-MF-8Q5" secondAttribute="height" multiplier="1:1" id="Edy-Hu-2IE"/>
+                                            <constraint firstAttribute="width" constant="80" id="rOy-f4-f7f"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trick bloqueada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSr-Px-daV">
+                                        <rect key="frame" x="63" y="144" width="224" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="jZN-5M-A9I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você ainda precisa mandar algumas tricks antes de liberá-la." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GK-10-f3z">
+                                        <rect key="frame" x="16" y="196" width="318" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-6S-3vh">
+                                        <rect key="frame" x="16" y="266.5" width="318" height="50"/>
+                                        <color key="backgroundColor" red="0.53029700970000004" green="0.94901960780000005" blue="0.43395062610000001" alpha="0.80137250209999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="56g-Z9-fxp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Continuar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="ouK-hQ-1B0" eventType="touchUpInside" id="kzz-fn-egw"/>
+                                            <action selector="saveVideo:" destination="wQi-9x-3M5" eventType="touchUpInside" id="7Bb-4Z-Qd2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1176492497" green="0.11764311049999999" blue="0.1176472828" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="9dx-MF-8Q5" firstAttribute="top" secondItem="Dlq-ck-C5i" secondAttribute="top" constant="32" id="1fa-H1-b8N"/>
+                                    <constraint firstItem="3GK-10-f3z" firstAttribute="top" secondItem="zSr-Px-daV" secondAttribute="bottom" constant="16" id="JGL-Te-51e"/>
+                                    <constraint firstItem="WEf-6S-3vh" firstAttribute="leading" secondItem="Dlq-ck-C5i" secondAttribute="leading" constant="16" id="Mjk-gg-2ia"/>
+                                    <constraint firstAttribute="trailing" secondItem="WEf-6S-3vh" secondAttribute="trailing" constant="16" id="TXK-ms-nQo"/>
+                                    <constraint firstItem="zSr-Px-daV" firstAttribute="top" secondItem="9dx-MF-8Q5" secondAttribute="bottom" constant="32" id="Xc4-7e-QOZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="WEf-6S-3vh" secondAttribute="bottom" constant="16" id="e8a-z5-fRk"/>
+                                    <constraint firstAttribute="trailing" secondItem="3GK-10-f3z" secondAttribute="trailing" constant="16" id="elD-Ga-KyI"/>
+                                    <constraint firstItem="3GK-10-f3z" firstAttribute="centerX" secondItem="zSr-Px-daV" secondAttribute="centerX" id="qN1-lP-QdE"/>
+                                    <constraint firstItem="9dx-MF-8Q5" firstAttribute="centerX" secondItem="Dlq-ck-C5i" secondAttribute="centerX" id="qoM-Nq-H4d"/>
+                                    <constraint firstItem="WEf-6S-3vh" firstAttribute="top" secondItem="3GK-10-f3z" secondAttribute="bottom" constant="32" id="uAO-Ua-jQp"/>
+                                    <constraint firstItem="zSr-Px-daV" firstAttribute="centerX" secondItem="9dx-MF-8Q5" secondAttribute="centerX" id="uVb-5u-lAn"/>
+                                    <constraint firstItem="3GK-10-f3z" firstAttribute="leading" secondItem="Dlq-ck-C5i" secondAttribute="leading" constant="16" id="vhE-Uu-m9l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RI5-u2-09U"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.70209072398490646" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RI5-u2-09U" firstAttribute="top" secondItem="ZnP-BN-s14" secondAttribute="top" constant="44" id="5YU-9i-Y5f"/>
+                            <constraint firstItem="Dlq-ck-C5i" firstAttribute="leading" secondItem="RI5-u2-09U" secondAttribute="leading" constant="32" id="64C-mu-LQX"/>
+                            <constraint firstItem="RI5-u2-09U" firstAttribute="trailing" secondItem="Dlq-ck-C5i" secondAttribute="trailing" constant="32" id="Kp4-YT-KwR"/>
+                            <constraint firstItem="ZnP-BN-s14" firstAttribute="leading" secondItem="RI5-u2-09U" secondAttribute="leading" id="VGi-dI-iz3"/>
+                            <constraint firstItem="ZnP-BN-s14" firstAttribute="bottom" secondItem="RI5-u2-09U" secondAttribute="bottom" constant="34" id="cnk-xu-BRw"/>
+                            <constraint firstItem="Dlq-ck-C5i" firstAttribute="top" secondItem="RI5-u2-09U" secondAttribute="top" constant="200" id="glV-NR-1qD"/>
+                            <constraint firstItem="RI5-u2-09U" firstAttribute="trailing" secondItem="ZnP-BN-s14" secondAttribute="trailing" id="nzz-ca-wtJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="WEf-6S-3vh" id="t0C-de-C2i"/>
+                        <outlet property="popUpBackgroundView" destination="Dlq-ck-C5i" id="xcI-eG-iLG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRQ-Dn-bJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3447.826086956522" y="97.767857142857139"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LCY-2e-PZD">
@@ -470,6 +566,7 @@
     <resources>
         <image name="done" width="42" height="42"/>
         <image name="easy" width="17" height="14"/>
+        <image name="locked" width="42" height="42"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trickImageTest" width="1280" height="855"/>
         <image name="video.fill.badge.plus" catalog="system" width="128" height="88"/>

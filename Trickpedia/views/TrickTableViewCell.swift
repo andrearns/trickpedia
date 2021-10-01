@@ -17,6 +17,8 @@ class TrickTableViewCell: UITableViewCell {
         super.awakeFromNib()
         cellBackgroundView.layer.cornerRadius = 15
         categoryBackgroundView.layer.cornerRadius = 5
+        lockedBackgroundView.layer.cornerRadius = 15
+        lockedBackgroundView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
     }
     
     func setup() {

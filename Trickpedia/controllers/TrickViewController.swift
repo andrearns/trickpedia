@@ -77,12 +77,15 @@ class TrickViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     @IBAction func addVideo(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
         if sender.tag == 1 {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "NewVideo")
             navigationController?.present(vc, animated: true, completion: nil)
         } else {
-            
+            let vc = storyboard.instantiateViewController(withIdentifier: "LockedTrickPopUp") as? LockedTrickPopUpViewController
+            vc?.trick = trick
+            navigationController?.present(vc!, animated: true, completion: nil)
         }
     }
     
